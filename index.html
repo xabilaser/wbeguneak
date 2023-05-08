@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="scss/estilos.css" rel="stylesheet"/>
+
+    <title>Webguneak</title>
+  </head>
+  <body>
+    <div class="container-fluid g-0 overflow-hidden"></div>
+      <header>
+          <div class="row justify-items-center align-items-center">
+
+            <!-- Columna de logo animado -->
+            <nav class="col-11 col-md-3 navbar justify-content-between centraldiv">
+                <div class="titulo"><h2>Webguneak</h2></div>
+                <div class="contbola"><div class="bola"><img src="images/bola.png"/></div></div>
+            </nav>
+  
+            <!--Columna separador para pantallas grandes-->
+            <div class="col-xl-1 d-none d-xl-block"></div>
+  
+            <!-- Columna central con propuesta de valor-->
+            <div class="col d-none d-lg-block justify-content-center centraldiv">
+              <h4 style="text-align: center;">Diseño y desarrollo de<br>aplicaciones y sitios web</h4>
+            </div>
+  
+            <!--Columna separador para todos los tamaños-->
+            <div class="col-xl-1 d-none d-xl-block"></div>
+            
+            <!--Columna lateral con el menú principal-->
+            <div class="col-12 col-md-4 align-items-center justify-content-end centraldiv">
+              <nav class="col-11 navbar justify-content-around align-items-baseline ms-1">
+                <a href="#"><img src="images/bola.png" class="icono" alt="logo bola del mundo"/>  Desarrollo Web  </a>
+                <a href="#"><img src="images/cartas.png" class="icono"  alt="botón Doseño gráfico"/>  Diseño  </a>
+                <a href="#"><img src="images/webapps.png" class="icono" alt="botón Web Apps"/>  Webapps  </a>
+              </nav>
+            </div>
+          </div>
+      </header>
+
+      <!--El main funciona exactamente igual y con la misma maquetación que el header para que el comportamiento en los breackpoints sea el mismo-->
+      <main>
+        <article class="principal">
+          <h4 style="text-align: center;">Diseño y desarrollo de<br>aplicaciones y sitios web</h4>
+          <div class="img-fluid imagen"><img src="images/paisaje2.jpg" width="100%" height="auto"/></div> 
+        </article>
+        <article class="row justify-items-between align-items-center medio">
+          <div class="col-xs-9 col-md-4 d-flex proto">
+            <img class="img-fluid" src="images/Diseño/DESIGN.ico"/>
+            <h4><br>DISEÑO GRÁFICO Y WEB</h4>
+          </div>
+          <div class="col-xs-9 col-md-4 d-flex proto">
+            <img class="img-fluid" src="images/Diseño/ROCKET.ico"/>
+            <h4><br>DESARROLLO WEB</h4>
+          </div>
+          <div class="col-xs-9 col-md-4 d-flex proto">
+            <img class="img-fluid" src="images/Diseño/MOVAPPS.ico"/>
+            <h4><br>APLICACIONES WEB</h4>
+          </div>
+        </article>
+      </main>
+
+    </div>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

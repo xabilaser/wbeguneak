@@ -1,0 +1,224 @@
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
+/* Variables de la carta de color y fuentes*/
+$corpo: rgb(248, 21, 97);
+$principal: #008ab4;
+$secundario: #ccebf1;
+$blanco: #fff;
+$fuente: 1em;
+
+/* Definiciones generales tras reseteo. Se anidan todas las definiciones importantes de acuerdo a la jerarquía de
+maquetación de html. */
+
+html{
+	font-size: $fuente - 0.2;
+  body{
+    background-color:$blanco;
+    font-family: 'Quicksand', sans-serif;
+    color:$corpo;
+    p {color:$principal; font-size: $fuente + 0.2;}
+    h1{
+      color:$secundario;
+      font-size: $fuente * 2;
+      font-weight: bolder;
+    }
+    a{
+      color: $corpo;
+      text-decoration: none;
+      :hover{
+        text-decoration: underline;
+        font-weight: bold;
+        color:$corpo;
+      }
+    }
+  }
+}
+
+header{
+  position: fixed;
+  width: 100%;
+  height: 10em;
+  top:0;
+  background-color: rgba(242, 245, 245, 0.959); 
+  box-shadow: 2px 0 6px 1px (rgb(203, 218, 217));
+}
+
+article{
+  width: 100%;
+}
+
+.principal {
+  margin-top: 22em; 
+}
+
+.medio{
+  padding: 6rem auto;
+  background-color: #fccfdc;
+}
+
+.imagen{
+  background-image: url("images/paisaje2.jpg");
+  margin: 4em auto;
+  padding:1rem;
+}
+
+.proto{
+  margin: 2rem auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input{
+  width:95%;
+  height: 90%;
+  margin-left: 1em;
+  height: 2.2em;
+  background-color: $secundario;
+  border-radius: 12pt;
+  border: 0;
+  text-decoration-color:$principal;
+}
+
+button{
+  background-color:
+  $blanco;
+  border: none;
+}
+
+button:hover{
+  background-color: $secundario;
+  text-decoration: underline;
+  opacity: 70%;
+}
+
+ul{
+  list-style:none;
+}
+
+.logo {max-width:120rem;}
+.mainmenu{margin-bottom: 3pt;}
+.mainmenu:hover{background-color:$principal;}
+.icono {height:2.5em; margin: 0 0.3em;}
+
+.botnav{
+  text-align:left;
+  :hover{
+  text-decoration: underline;
+  color: $principal;
+  font-weight: bolder;
+  }
+}
+
+.txartela{
+  padding: 1.2em 1em;
+  border: $secundario solid 3px;
+  border-radius: 6pt;
+}
+
+.titulo{
+  position: relative;
+  width:40%;
+  height:auto;
+  margin: 2rem 4rem;
+  text-align: start;
+  overflow: visible;
+  letter-spacing: -0.3rem;
+  h2{
+      font-size: 3.7em;
+      font-family:'Quicksand', sans-serif;
+      color: $corpo;
+  }
+  .tracking-in-expand {
+      animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  }
+  animation-name: tracking-in-expand;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+
+.contbola{
+  position:absolute;
+  display:flex;
+  justify-content: flex-end;
+  z-index:9;
+  height:100%;
+  width:28rem;
+  margin-top:3.2rem;
+  .bola{
+    height:100%;
+    width:auto;
+    position: relative;
+    top: 0.5rem;
+    right:0;
+    .slide-right {
+        animation: translation 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    animation-name: translation;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    img{
+      width: 5rem;
+      height: 5rem;
+      object-fit:cover;
+      .rotate-center {
+          animation: rotate-center 0.6s ease-in-out both;
+      }
+      animation-name: rotate-center;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+    }
+  }   
+}
+
+/*Animación título*/
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -1.2em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*Animación mundo desplazamiento*/
+@keyframes translation {
+  0% {
+      visibility:hidden;
+  }
+  1% {
+    transform: translateX(-25rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/*Animación mundo rotación reloj*/
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
